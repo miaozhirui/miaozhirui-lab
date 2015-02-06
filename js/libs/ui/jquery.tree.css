@@ -1,0 +1,67 @@
+.main-row {
+    background-color: rgb(245, 245, 245);
+    width: 600px;
+    font-size:20px;
+    line-height:30px;
+}
+.row :hover{
+    background-color: #def;
+}
+
+
+
+.child-row {
+    background-color: white;
+    font-size:18px;
+    line-height:20px;
+}
+
+.name {
+    display: inline-block;
+    width:400px;
+}
+.num {
+    display: inline-block;
+    width:100px;
+    float:right;
+}
+.child-section {
+    display: none;
+    margin-left: 10px;
+}
+.add {
+    display: none;
+    width:100px;
+    float:right;
+}
+.row:hover .num {
+    display:none;
+}
+.row:hover .add {
+    display:inline-block;
+}
+.arrow {
+    display: inline-block;
+    width : 10px;
+}
+.no-arrow {
+    display: inline-block;
+    width : 10px;
+}
+.add-btn{
+    -moz-user-select: none;
+    border: 1px solid #aaa;
+    border-radius: 2px;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+    color: #000;
+    display: inline-block;
+    height: 14px;
+    line-height: 14px;
+    margin: 0;
+    vertical-align: middle;
+}
+
+
+
+
+

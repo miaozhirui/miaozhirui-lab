@@ -1,0 +1,206 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>IPreport</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
+<link rel='stylesheet' type='text/css' href="css/main.css">
+<script type="text/javascript" src="jquery-1.8.3.min.js"></script>
+
+<style>
+*{padding:0;margin:0;}
+body{background:url(images/banner.jpg) no-repeat center top;}
+.all-wrap{height:450px;width:1000px;position: relative;margin:0 auto;top:330px;overflow: hidden}
+.all-wrap ul{position: absolute;list-style:none;}
+.all-wrap ul li{float:left;display: none;position: absolute;top:400px;opacity:0.4;}
+.partA{top:40px;left:-100px;height:400px;width: 1100px;}
+.partA li{margin-left: 30px}
+.partB{top:20px;left:70px;height:350px;width: 1000px;}
+.partB li{margin-left: 150px}
+.partC{top:00px;left:100px;height:300px;width: 900px;}
+.partC li{margin-left: 140px}
+.partC li img{-webkit-filter: blur(2px);filter: blur(2px);}
+.partD{top:-20px;height:200px;width: 1100px;left:-50px;}
+.partD li{margin-left: 160px}
+.partD li img{-webkit-filter: blur(4px);filter: blur(4px);}
+.partE{top:-10px;left:-100px;height:300px;width: 1100px;}
+.overturn{transform:rotateY(180deg);-webkit-transform:rotateY(180deg);}
+
+</style>
+</head>
+<body>
+	<div class="all-wrap">
+		<ul class="partA">
+			<li><img src=""></li>
+			<li><img src=""></li>
+			<li><img src=""></li>
+			<li><img src=""></li>
+			<li><img src=""></li>
+			<li><img src=""></li>
+		</ul>
+		<ul class="partB">
+			<li><img src=""></li>
+			<li><img src=""></li>
+			<li><img src=""></li>
+			<li><img src=""></li>
+			<li><img src=""></li>
+			<li><img src=""></li>
+			<li><img src=""></li>
+			<li><img src=""></li>
+			<li><img src=""></li>
+			<li><img src=""></li>
+
+		</ul>
+		<ul class="partC">
+			<li><img src=""></li>
+			<li><img src=""></li>
+			<li><img src=""></li>
+			<li><img src=""></li>
+			<li><img src=""></li>
+			<li><img src=""></li>
+			<li><img src=""></li>
+			<li><img src=""></li>
+			<li><img src=""></li>
+			<li><img src=""></li>
+			<li><img src=""></li>
+			<li><img src=""></li>
+			<li><img src=""></li>
+			<li><img src=""></li>
+
+		</ul>
+		<ul class="partD">
+			<li><img src=""></li>
+			<li><img src=""></li>
+			<li><img src=""></li>
+			<li><img src=""></li>
+			<li><img src=""></li>
+			<li><img src=""></li>
+			<li><img src=""></li>
+			<li><img src=""></li>
+			<li><img src=""></li>
+			<li><img src=""></li>
+			<li><img src=""></li>
+			<li><img src=""></li>
+			<li><img src=""></li>
+			<li><img src=""></li>
+			<li><img src=""></li>
+			<li><img src=""></li>
+			<li><img src=""></li>
+			<li><img src=""></li>
+			<li><img src=""></li>
+			<li><img src=""></li>
+			<li><img src=""></li>
+			<li><img src=""></li>
+			<li><img src=""></li>
+			<li><img src=""></li>
+			<li><img src=""></li>
+			<li><img src=""></li>
+			<li><img src=""></li>
+		</ul>
+	</div>
+	<input id="getRandomNum" type="hidden">
+</body>
+<script type="text/javascript">
+	;(function($) {
+		$.fn.extend({
+			"animations":function(options){
+				//设置默认值
+				options=$.extend({
+					size : 1.5,//图片尺寸
+					move : 300,//图片位移系数
+					opacitys : 1,//图片最大透明度
+					layerTime : 360,//运动系数
+					thisClassnames : "partA"//指定层
+				},options);
+
+				var animationData = {
+					"frame_reset" :{top:options.move, opacity:0},
+					"frame1" :{top:70, opacity:options.opacitys},
+					"frame2" :{top:0, opacity:0}
+				}; 
+
+
+				function rd(n,m){//产生随机数
+					    var c = m-n+1;  
+					    return Math.floor(Math.random() * c + n);
+					}
+ 
+				function animatImgs(){
+					$('.'+options.thisClassnames).children('li').each(function(){
+						if(!$(this).is(":animated")){
+
+							$(this).removeClass('overturn').animate(animationData.frame_reset,options.layerTime * layTime,"swing");
+							var min_num = 1;//随机数最小
+							var max_num = 25;//随机数最大
+							var min_time = 30;//随机时间系数最小
+							var max_time = 60;//随机时间系数最大
+							var min_left = 10;//随机时间系数最小
+							var max_left = 700;//随机时间系数最大
+							var norotateds = 0;//判断是否翻转
+							var rotateds = 1;//0不翻转1翻转
+							//var max_time_start = 20;
+							var ramdomNum = (rd(min_num,max_num));//随机图像
+							//var layTimestart = (rd(min_num,max_time_start));//生成时间系数（1-10）
+							var layTime = (rd(min_time,max_time));//运动随机时间系数（8-10)
+							var left_val = (rd(min_left,max_left));//随机图像
+							var rotatedNum = (rd(norotateds,rotateds));//0不翻转1翻转
+							var flag = $("#getRandomNum").val();
+							if(ramdomNum == flag){
+									ramdomNum =  (rd(min_num,max_num))
+								}
+							$("#getRandomNum").val(ramdomNum);
+							var path = "images2/icons_"+ramdomNum+".png";
+							var _Imgs = $(this).find('img');
+							_Imgs.attr('src',path).css('width',options.size * 110);
+							var rate = options.move / (options.layerTime * layTime);
+							if(rotatedNum == 1){//随机数，0不翻转1翻转
+								var animate_object = $(this).addClass('overturn').show();
+							}else if(rotatedNum == 0){
+								var animate_object = $(this).show();
+							}
+							animate_object.
+								css('left',left_val).
+								animate(animationData.frame1, options.layerTime * layTime, 'linear').
+								animate(animationData.frame2, 70/rate, 'linear');
+						}	
+					});
+				}
+				animatImgs();
+				setInterval(animatImgs,options.layerTime);
+			}
+		});
+	})(jQuery);
+
+$(function(){
+	$('.partA').animations();
+	$('.partB').animations({size:1,opacitys:0.7,move:250,layerTime:370,thisClassnames:'partB'});
+	$('.partC').animations({size:0.6,opacitys:0.6,move:230,layerTime:380,thisClassnames:'partC'});
+	$('.partD').animations({size:0.4,opacitys:0.5,move:180,layerTime:390,thisClassnames:'partD'});
+	//$('.partE').animations({size:1.4,opacitys:1,move:220,layerTime:370,thisClassnames:'partE'});
+	//$('.partE').animations({layerTime:400,move:280,thisClassnames:'partE'});
+// var  n = 0.85;
+// var lay1 = {
+// 	size : 1,
+// 	move : 400,
+// 	range : {"x1":350, "y1":50, "x2":950, "y2":470}
+// 	opacitys : 0.9;
+// }
+
+// var lay2{
+//  	size : 1 * n,
+//  	move : 400 * n,
+//  	range : {"x1":300, "y1":50, "x2":950, "y2":420}
+//  	opacitys : 0.7;
+//  }
+ 	
+// var lay3{
+// 	size : 1 * n * n,
+//  	move : 400 * n *n,
+//  	range : {"x1":250, "y1":50, "x2":950, "y2":370}
+//  	opacitys : 0.3;
+// }
+});
+
+</script>
+</html>

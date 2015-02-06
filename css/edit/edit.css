@@ -1,0 +1,53 @@
+.tree {
+    width: 600px;
+    border: solid 1px rgb(210, 210, 210);
+    margin: 50px auto;
+}
+.edit-main {
+    width: 1140px;
+    margin: 50px auto;
+    border: 1px solid #d2d2d2;
+}
+.edit-step li h1 {
+    padding-left: 150px;
+}
+.edit-step1-progress {
+    margin-top: -10px;
+    height:70px;
+    background: url('/img/edit_step1_off.png') no-repeat;
+}
+.edit-step1-progress.edit-progress-on {
+    background: url('/img/edit_step1_on.png') no-repeat;
+}
+.edit-step2-progress {
+    margin-top: -10px;
+    height:70px;
+    background: url('/img/edit_step2_off.png') no-repeat;
+}
+.edit-step2-progress.edit-progress-on {
+    background: url('/img/edit_step2_on.png') no-repeat;
+}
+li.edit-step1.edit-progress-on {
+    color: #75bb00;
+}
+.edit-search {
+    margin: 0px auto;
+    width : 850px;
+}
+.edit-search-input {
+    height : 30px;
+    font-size : 16px;
+}
+.edit-search-btn {
+    display : inline-block;
+    background:#75bb00;
+    color:#fff;
+    text-align: center;
+    width:150px;
+    border:none;
+    border:0;
+    height:34px;
+    font-size: 22px;
+    vertical-align: middle;
+    line-height:34px;
+}
