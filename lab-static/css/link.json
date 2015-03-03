@@ -1,0 +1,11 @@
+{
+    "GLOBAL": ["reset.css", "common.css"],
+    "dashboardOverview": ["dashboard.css"],
+    "dashboardValue": ["dashboard.css","chart/chart.css"],
+    "editCompany": ["edit/editCompany.css","edit/editCommon.css"],
+    "editCompare": ["edit/editCompare.css","edit/editCommon.css"],
+    "login":["login.css"],
+    "requestTrial":["login.css"],
+    "acknowledgement":["login.css"],
+    "index":["index.css"]
+}

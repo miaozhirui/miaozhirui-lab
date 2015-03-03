@@ -1,0 +1,26 @@
+.knockout-autoComplete {
+    margin: 58px 0 0;
+    /*padding: 5px 0;*/
+    width:800px;
+    position: absolute;
+    background: white;
+    max-height: 200px;
+    overflow: auto;
+}
+.knockout-autoComplete li {
+    /*height:30px;*/
+    /*line-height: 30px;*/
+    padding: 0px 20px;
+}
+.knockout-autoComplete li>div{
+    height:30px;
+    line-height: 30px;
+    border-bottom: 1px solid rgb(210, 210, 210);
+}
+.knockout-autoComplete li:hover {
+    cursor: pointer;
+    background-color: #def;
+}
+.autocomplete-selected {
+    background: #eeeeee;
+}

@@ -1,0 +1,54 @@
+/** 
+* Created by Binlin 
+* Date: 14-12-22 
+* Time: AM 11:04; 
+* dashboard 模块样式
+*/
+.dashboard-banner{background: #f5f5f5;padding-bottom: 28px;}
+.dashboard-main,.dashboard-nav-main{width: 1200px;margin:0 auto;position: relative;}
+.dashboard-main h1.dashboard-h1{font-size: 28px;font-weight: bolder;border-bottom: 1px solid #d2d2d2;padding:30px 0 8px 30px;position: relative;}
+.dashboard-nav{height:48px;background: #75bb00;}
+.dashboard-nav-ul li{width:140px;height:48px;float:left;margin-right: 15px;}
+.dashboard-nav-ul li a{width:140px;height:48px;line-height: 48px;text-align: center;color: #fff;font-weight: bolder;font-size:20px;display: inline-block;}
+.dashboard-nav-ul li a.current{background: #609900}
+.dashboard-overview-ul{height:162px;border:1px solid #d2d2d2;border-radius: 8px}
+.overview-h2{font-size: 26px;font-weight: bolder;margin:50px 0 20px 0;}
+.dashboard-overview-ul li{width:198px;height:120px;padding:25px 20px 18px;border-right:1px solid #d2d2d2;float:left;position: relative;}
+.dashboard-overview-ul li.no-border{border-right:none;}
+.dashboard-overview-ul li h3{color:#75bb00;font-size:18px;}
+.dashboard-overview-ul li p{font-size:36px;font-weight: bolder;margin-top: 16px}
+.dashboard-overview-ul li .year{font-size:18px;color:#c6c6c6;position: absolute;bottom: 15px;right:20px;}
+.charts-space{height:680px;border-radius: 8px;border:1px solid #d2d2d2;}
+.form-wrap-table{width:100%;}
+.products-wrap{width:693px;float:left;}
+.inventor-wrap{width:422px;float: right;}
+.dashboard-h1-icon{height:60px;width:61px;background: url(../img/dashboard.png) no-repeat;position: absolute;right:34px;top:36px;}
+.icon-gray{background-position: 0 0;}
+.icon-green{background-position: -73px 0}
+.dashboard-part{padding:14px 0 10px 100px;width:820px;line-height: 20px;font-size: 14px;position: relative;}
+.dashboard-icon-vs{height:36px;width:36px;background: url(../img/dashboard.png) no-repeat -145px 0; display: inline-block;position:absolute; left: 35px;top:29%;}
+.unlogin-show{background: rgba(0,0,0,0.7);height:240px;position: fixed;bottom:0px;width: 100%;z-index: 1000;text-align: center;}
+.unlogin-show h2{font-size:30px;color:#fff;margin-top: 70px}
+.trial-btn-wrap{margin-top: 30px}
+.trial-btn-wrap a{margin:0 30px;width:142px;display: inline-block;}
+.dashboard-patent-ul li{border: 1px solid #aaa;padding:4px 9px;background: #fff;float: left;margin:2px 3px;font-size: 13px;}
+.change-charts-ul{width:1080px;border-bottom: 1px solid #aaa;height:40px;margin-top: 56px;padding-left:20px;}
+.change-charts-ul li{float: left;height:40px;margin-left:20px;}
+.change-charts-ul li a{height:39px;line-height:39px;padding:0px 14px;text-align: center;background: url(../img/btn-bg.png) repeat-x;display: inline-block;border:1px solid #aaa;font-weight: bolder;font-size: 13px}
+.change-charts-ul li a.current{background: #fff;height:40px;border-bottom:none}
+.charts-wrap{margin-top:30px;position: relative}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
