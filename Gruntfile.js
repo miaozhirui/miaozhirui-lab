@@ -7,7 +7,7 @@ require('load-grunt-tasks')(grunt);//将package.json里面的文件依赖的模�
 
 var config = {
    app: '',
-   dist: 'gruntjs/'
+   dist: 'release/'
 }
 
 grunt.initConfig({
@@ -59,11 +59,16 @@ grunt.initConfig({
     //     }
     // },
     copy: {
-        link_json: {
+        copy_files: {
             files: [
                 {
                     expand: true,
                     src: '<%= config.app %>css/**/*.json',
+                    dest: '<%= config.dist %>'
+                },
+                {
+                    expand: true,
+                    src: '<%= config.app %>img/**/*',
                     dest: '<%= config.dist %>'
                 }
             ]
@@ -81,7 +86,7 @@ grunt.initConfig({
     // },
 
     clean: {
-        dist: {
+        target: {
             //**表示所有的文件和目录; 表示所有的文件*
             //{a,b}.js表示a.js或b.js; !a.js表示取反的意思
             src: ['<%= config.dist %>**/*'],//支持数组的格式
@@ -90,7 +95,7 @@ grunt.initConfig({
             // filter: function(filepath) {
             //     return !grunt.file.isDir(filepath)
             // },
-            dot: true, //也会选中以点为开头的文件
+            // dot: true, //也会选中以点为开头的文件
         }
     },
 
