@@ -1,5 +1,4 @@
 <?php
-
 // 主程序
 class mainController extends Controller
 {
@@ -14,3 +13,4 @@ class mainController extends Controller
         $this->view();
     }
 }
+

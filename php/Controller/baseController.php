@@ -18,7 +18,11 @@ class Controller {
             exit;
         }
 
+<<<<<<< HEAD
        require( 'view/enter/template.ctp');
+=======
+       require(__WEB__ . 'view/enter/template.ctp');
+>>>>>>> ee232e3d738279320d3a638b94eeae53b3e71b5d
     }
 
     public function renderMainContent() {
@@ -27,25 +31,41 @@ class Controller {
 
     protected function renderCssContent() {
         $pageName = $this->pageName;
+<<<<<<< HEAD
         $cssJson =__WEB__  . "gruntjs/css/" . 'link.json';
+=======
+        $cssJson =__WEB__  . "css/" . 'link.json';
+>>>>>>> ee232e3d738279320d3a638b94eeae53b3e71b5d
         $cssArray  = json_decode(file_get_contents($cssJson, true));
 
         foreach($cssArray as $key => $value) {
             if($key === "GLOBAL") :
                 foreach($value as $v) {
+<<<<<<< HEAD
                     echo "\t<link rel='stylesheet' type='text/css' href=". __WEB__ ."gruntjs/css/" . $v.".min.css>\n\t";
+=======
+                    echo "\t<link rel='stylesheet' type='text/css' href=". __WEB__ ."css/" . $v.">\n\t";
+>>>>>>> ee232e3d738279320d3a638b94eeae53b3e71b5d
                 }
                 endif;
 
             if($pageName) :
                 if($key === $pageName):
                     foreach($value as $v) {
+<<<<<<< HEAD
                         echo "\t<link rel='stylesheet' type='text/css' href=". __WEB__ ."gruntjs/css/" . $v.".min.css>\n\t";
+=======
+                        echo "\t<link rel='stylesheet' type='text/css' href=". __WEB__ ."css/" . $v.">\n\t";
+>>>>>>> ee232e3d738279320d3a638b94eeae53b3e71b5d
                     }
                     endif;
                 endif;
         }
+<<<<<<< HEAD
     } 
+=======
+    }
+>>>>>>> ee232e3d738279320d3a638b94eeae53b3e71b5d
 
     protected function renderJsContent() {
         $pageVars = array();

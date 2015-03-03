@@ -51,6 +51,10 @@
             return value;
         }
     })();
+<<<<<<< HEAD
+=======
+
+>>>>>>> ee232e3d738279320d3a638b94eeae53b3e71b5d
     var config = {
         plugins: ['shim'],
         debug: true,
@@ -63,6 +67,7 @@
             'jquery': 'libs/jquery-1.8.3',
             'ept': 'libs/ept_all',
             'lodash': 'libs/lodash',
+<<<<<<< HEAD
             'ko': 'libs/knockout-3.2.0',
             'juicer': 'libs/juicer'
     },
@@ -71,3 +76,18 @@
 }
     seajs.config(config);
 })();
+=======
+            'masonry': 'libs/masonry',
+            'ko': 'libs/knockout-3.2.0',
+            'juicer': 'libs/juicer',
+            'jquery.tree':{
+                        src: 'libs/jquery.tree',
+                        deps: ['juicer','libs/ui/jquery.tree.css']
+                    }
+    },
+     preload: ['jquery']
+
+}
+    seajs.config(config);
+})();
+>>>>>>> ee232e3d738279320d3a638b94eeae53b3e71b5d
