@@ -12,7 +12,14 @@ var config = {
 
 grunt.initConfig({
     config: config,
-
+    watch: {
+        scripts: {
+            files: {
+                src: ['<%= config.src%>js/**/*','<%= config.src%>css/**/*']            
+            },
+            tasks:['cssmin']
+        }
+    },
     // 方式1：这种方式太麻烦，可以采用第二种的方式
     // copy: {
     //     dist_css: {
