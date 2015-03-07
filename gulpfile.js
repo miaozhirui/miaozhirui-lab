@@ -1,7 +1,8 @@
 var gulp = require('gulp'),
-mincss=require('gulp-minify-css'),
+mincss = require('gulp-minify-css'),
 sourcemaps = require('gulp-sourcemaps'),
-clean = require('gulp-clean')
+clean = require('gulp-clean'),
+copy = require('gulp-copy'),
 uglify = require('gulp-uglify');
 
 
@@ -24,4 +25,8 @@ gulp.task('clean', function() {
     gulp.src('gulp')
             .pipe(clean());
 })
-gulp.task('default', ['mincss','minjs'])
+gulp.task('copy', function() {
+    gulp.src('./img/**/*')
+            .pipe(gulp.dest('gulp/img'));
+})
+gulp.task('default', ['mincss','minjs','copy'])
