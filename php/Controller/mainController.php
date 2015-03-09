@@ -12,5 +12,10 @@ class mainController extends Controller
         $this->pageName = 'transition';
         $this->view();
     }
+
+    public function _components() {
+$this->pageName = 'components';
+$this ->view();
+} 
 }
 

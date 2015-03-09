@@ -122,7 +122,7 @@ grunt.initConfig({
 
     watch: {
         scripts:{
-            files: 'js/**/*.js',
+            files: ['js/**/*.js', 'css/**/*.css'],
             tasks: ['default'],
             // options: {
             //     reload: true
