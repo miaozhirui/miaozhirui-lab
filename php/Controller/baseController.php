@@ -28,14 +28,14 @@ class Controller {
 
     protected function renderCssContent() {
         $pageName = $this->pageName;
-        $cssJson =__WEB__  . "release/css/" . 'link.json';
+        $cssJson =__WEB__  . "css/" . 'link.json';
 
         $cssArray  = json_decode(file_get_contents($cssJson, true));
 
         foreach($cssArray as $key => $value) {
             if($key === "GLOBAL") :
                 foreach($value as $v) {
-                    echo "\t<link rel='stylesheet' type='text/css' href=". __WEB__ ."release/css/" . $v.".css>\n\t";
+                    echo "\t<link rel='stylesheet' type='text/css' href=". __WEB__ ."css/" . $v.".css>\n\t";
 
                 }
                 endif;
@@ -43,7 +43,7 @@ class Controller {
             if($pageName) :
                 if($key === $pageName):
                     foreach($value as $v) {
-                        echo "\t<link rel='stylesheet' type='text/css' href=". __WEB__ ."release/css/" . $v.".css>\n\t";
+                        echo "\t<link rel='stylesheet' type='text/css' href=". __WEB__ ."css/" . $v.".css>\n\t";
 
                     }
                     endif;

@@ -1,5 +1,4 @@
 (function() {
-
     var parseScript, getQuery, getBase;
 
     parseScript = (function() {
