@@ -1,4 +1,4 @@
-'use strict';
+// 'use strict';
 
 module.exports = function(grunt){//grunt的基本框架
 require('time-grunt')(grunt);//记录每个任务执行的时间
@@ -96,7 +96,7 @@ grunt.initConfig({
         target: {
             //**表示所有的文件和目录; 表示所有的文件*
             //{a,b}.js表示a.js或b.js; !a.js表示取反的意思
-            src: ['<%= config.dist %>**/*'],//支持数组的格式
+            src: ['<%= config.dist %>'],//支持数组的格式
             // filter: 'isFile'//过滤条件,表示删除的都是文件
             //以下都是可选参数
             // filter: function(filepath) {
@@ -120,6 +120,16 @@ grunt.initConfig({
         }
     },
 
+    watch: {
+        scripts:{
+            files: ['js/**/*.js', 'css/**/*.css'],
+            tasks: ['default'],
+            // options: {
+            //     reload: true
+            //    }
+        }
+    },
+
     cssmin: {
         my_target: {
             files: [
@@ -135,6 +145,5 @@ grunt.initConfig({
 
 
 grunt.registerTask('default', ['copy', 'uglify', 'cssmin']);
-
 
 }
