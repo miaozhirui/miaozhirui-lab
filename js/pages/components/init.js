@@ -1,6 +1,7 @@
 define(function(require){
     require('ko');
-
+    // require('miao')
+    require('./test');
 
     ko.components.register('my-component', {
         viewModel: function(params) {
