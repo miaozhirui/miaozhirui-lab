@@ -64,7 +64,7 @@ class Controller {
 js;
     echo $jsContent;
 
-    echo $add = "\n\t\t<script src='". __WEB__ ."js/libs/sea.js' data-config='" .__WEB__. "js/sea-config.js' data-main='" .__WEB__. "js/boot.js'></script>\n";
+    echo $add = "\n\t\t<script src='". __WEB__ ."??js/libs/sea.js,js/libs/seajs-combo.js' data-config='" .__WEB__. "js/sea-config.js' data-main='" .__WEB__. "js/boot.js'></script>\n";
 
     }
 
